@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оливковые рецепты | Главная</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>Оливковые рецепты</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero">
+        <div class="container">
+            <h1>Вкусные рецепты</h1>
+            <h2>Здоровая еда!</h2>
+            <p>Откройте для себя коллекцию вкусных и простых рецептов для каждого дня. Готовьте с удовольствием!</p>
+            <a href="#recipes" class="btn">Смотреть рецепты</a>
+        </div>
+    </section>
+
+    <!-- Фильтры категорий -->
+    <!-- Карусель рецептов (вместо категорий) -->
+    <div class="container">
+        <div class="carousel-container">
+            <h2 class="carousel-title">Рецепты недели</h2>
+            
+            <div class="carousel">
+                <!-- Слайд 1 - Завтраки -->
+                <div class="carousel-slide active" data-category="breakfast">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                alt="Завтраки" loading="lazy">
+                        </div>
+                        <div class="slide-text">
+                            <h3>Энергичные завтраки</h3>
+                            <p>Начните день с правильного завтрака! Полезные омлеты, каши, смузи и тосты.</p>
+                            <div class="slide-stats">
+                                <span><i class="far fa-clock"></i> 10-20 мин</span>
+                                <span><i class="fas fa-fire"></i> Легко</span>
+                            </div>
+                            <a href="#breakfast-recipes" class="btn slide-btn">Смотреть рецепты</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Слайд 2 - Обеды -->
+                <div class="carousel-slide" data-category="lunch">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                alt="Обеды" loading="lazy">
+                        </div>
+                        <div class="slide-text">
+                            <h3>Сытные обеды</h3>
+                            <p>Питательные салаты, супы, горячие блюда. Идеально для дневного перерыва.</p>
+                            <div class="slide-stats">
+                                <span><i class="far fa-clock"></i> 20-40 мин</span>
+                                <span><i class="fas fa-fire"></i> Средне</span>
+                            </div>
+                            <a href="#lunch-recipes" class="btn slide-btn">Смотреть рецепты</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Слайд 3 - Ужины -->
+                <div class="carousel-slide" data-category="dinner">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                alt="Ужины" loading="lazy">
+                        </div>
+                        <div class="slide-text">
+                            <h3>Романтические ужины</h3>
+                            <p>Изысканные блюда для вечернего приема пищи. От простых до праздничных.</p>
+                            <div class="slide-stats">
+                                <span><i class="far fa-clock"></i> 30-60 мин</span>
+                                <span><i class="fas fa-fire"></i> Средне/Сложно</span>
+                            </div>
+                            <a href="#dinner-recipes" class="btn slide-btn">Смотреть рецепты</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Слайд 4 - Десерты -->
+                <div class="carousel-slide" data-category="dessert">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                alt="Десерты" loading="lazy">
+                        </div>
+                        <div class="slide-text">
+                            <h3>Сладкие десерты</h3>
+                            <p>Торты, пироги, печенья и другие сладости для завершения трапезы.</p>
+                            <div class="slide-stats">
+                                <span><i class="far fa-clock"></i> 45-90 мин</span>
+                                <span><i class="fas fa-fire"></i> Средне</span>
+                            </div>
+                            <a href="#dessert-recipes" class="btn slide-btn">Смотреть рецепты</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Слайд 5 - Выпечка -->
+                <div class="carousel-slide" data-category="baking">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                alt="Выпечка" loading="lazy">
+                        </div>
+                        <div class="slide-text">
+                            <h3>Домашняя выпечка</h3>
+                            <p>Хлеб, булочки, пицца и другая выпечка. Аромат свежеиспеченного теста.</p>
+                            <div class="slide-stats">
+                                <span><i class="far fa-clock"></i> 1-3 часа</span>
+                                <span><i class="fas fa-fire"></i> Сложно</span>
+                            </div>
+                            <a href="#baking-recipes" class="btn slide-btn">Смотреть рецепты</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Слайд 6 - Напитки -->
+                <div class="carousel-slide" data-category="drinks">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                alt="Напитки" loading="lazy">
+                        </div>
+                        <div class="slide-text">
+                            <h3>Освежающие напитки</h3>
+                            <p>Коктейли, смузи, лимонады и чаи. Идеальное дополнение к любому блюду.</p>
+                            <div class="slide-stats">
+                                <span><i class="far fa-clock"></i> 5-15 мин</span>
+                                <span><i class="fas fa-fire"></i> Легко</span>
+                            </div>
+                            <a href="#drinks-recipes" class="btn slide-btn">Смотреть рецепты</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Навигация карусели -->
+            <div class="carousel-nav">
+                <button class="carousel-prev" aria-label="Предыдущий слайд">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-dots">
+                    <button class="dot active" data-slide="0" aria-label="Перейти к слайду 1"></button>
+                    <button class="dot" data-slide="1" aria-label="Перейти к слайду 2"></button>
+                    <button class="dot" data-slide="2" aria-label="Перейти к слайду 3"></button>
+                    <button class="dot" data-slide="3" aria-label="Перейти к слайду 4"></button>
+                    <button class="dot" data-slide="4" aria-label="Перейти к слайду 5"></button>
+                    <button class="dot" data-slide="5" aria-label="Перейти к слайду 6"></button>
+                </div>
+                
+                <button class="carousel-next" aria-label="Следующий слайд">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <!-- Индикатор автосмены -->
+            <div class="auto-slide-indicator">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Сетка рецептов -->
+    <div class="container" id="recipes">
+        <h2 class="recipes-title">Популярные рецепты</h2>
+        <div class="recipes-grid">
+            <!-- Рецепт 1 -->
+            <a href="recipe1.html" class="recipe-card fade-in" data-category="baking">
+                <div class="recipe-image">
+                    <img src="images/bread.jpg" alt="Домашний хлеб на заквассе" loading="lazy">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Домашний хлеб на закваске</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 3 часа</span>
+                        <span><i class="fas fa-fire"></i> Средняя</span>
+                        <span><i class="fas fa-user-friends"></i> 6 порций</span>
+                    </div>
+                    <p class="recipe-description">Ароматный домашний хлеб с хрустящей корочкой и мягким мякишем.</p>
+                    <div class="recipe-tags">
+                        <span class="tag">Выпечка</span>
+                        <span class="tag">Здоровое питание</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Рецепт 2 -->
+            <a href="recipe2.html" class="recipe-card fade-in" data-category="lunch">
+                <div class="recipe-image">
+                    <img src="images/salad.jpg" alt="Домашний хлеб на заквассе" loading="lazy">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Оливковый салат с фетой</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 20 мин</span>
+                        <span><i class="fas fa-fire"></i> Легко</span>
+                        <span><i class="fas fa-user-friends"></i> 4 порции</span>
+                    </div>
+                    <p class="recipe-description">Свежий салат с оливками, сыром фета и овощами.</p>
+                    <div class="recipe-tags">
+                        <span class="tag">Салаты</span>
+                        <span class="tag">Быстро</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Рецепт 3 -->
+            <a href="recipe3.html" class="recipe-card fade-in" data-category="dinner">
+                <div class="recipe-image">
+                    <img src="images/curitsa.jpg" alt="Домашний хлеб на заквассе" loading="lazy">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Курица в оливковом соусе</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 50 мин</span>
+                        <span><i class="fas fa-fire"></i> Средняя</span>
+                        <span><i class="fas fa-user-friends"></i> 4 порции</span>
+                    </div>
+                    <p class="recipe-description">Нежное куриное филе в ароматном соусе из оливок.</p>
+                    <div class="recipe-tags">
+                        <span class="tag">Основные блюда</span>
+                        <span class="tag">Мясо</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Рецепт 4 -->
+            <a href="recipe4.html" class="recipe-card fade-in" data-category="lunch">
+                <div class="recipe-image">
+                    <img src="images/pasta.jpg" alt="Паста" loading="lazy">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Паста с песто и оливками</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 25 мин</span>
+                        <span><i class="fas fa-fire"></i> Легко</span>
+                        <span><i class="fas fa-user-friends"></i> 3 порции</span>
+                    </div>
+                    <p class="recipe-description">Итальянская паста с домашним соусом песто и оливками.</p>
+                    <div class="recipe-tags">
+                        <span class="tag">Паста</span>
+                        <span class="tag">Итальянская</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Рецепт 5 -->
+            <a href="recipe5.html" class="recipe-card fade-in" data-category="dessert">
+                <div class="recipe-image">
+                    <img src="images/pie.jpg" alt="Пирог" loading="lazy">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Яблочный пирог с корицей</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 1 час 15 мин</span>
+                        <span><i class="fas fa-fire"></i> Средняя</span>
+                        <span><i class="fas fa-user-friends"></i> 8 порций</span>
+                    </div>
+                    <p class="recipe-description">Ароматный пирог с яблоками и корицей.</p>
+                    <div class="recipe-tags">
+                        <span class="tag">Десерты</span>
+                        <span class="tag">Выпечка</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Рецепт 6 -->
+            <a href="recipe6.html" class="recipe-card fade-in" data-category="breakfast">
+                <div class="recipe-image">
+                    <img src="images/omlet.jpg" alt="Омлет" loading="lazy">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Омлет с овощами и зеленью</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 15 мин</span>
+                        <span><i class="fas fa-fire"></i> Легко</span>
+                        <span><i class="fas fa-user-friends"></i> 2 порции</span>
+                    </div>
+                    <p class="recipe-description">Пышный омлет со свежими овощами и зеленью.</p>
+                    <div class="recipe-tags">
+                        <span class="tag">Завтраки</span>
+                        <span class="tag">Быстро</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>Оливковые рецепты</span>
+                </a>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div>
+                    <p>© 2025 Оливковые рецепты. Все права защищены.</p>
+                    <p>Сайт создан для любителей вкусной и здоровой пищи.</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Использование материалов сайта возможно только с письменного разрешения Заирочки, понятно?</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+<script>
+    // Карусель рецептов
+class RecipeCarousel {
+    constructor() {
+        this.carousel = document.querySelector('.carousel');
+        this.slides = document.querySelectorAll('.carousel-slide');
+        this.dots = document.querySelectorAll('.dot');
+        this.prevBtn = document.querySelector('.carousel-prev');
+        this.nextBtn = document.querySelector('.carousel-next');
+        this.timerElement = document.querySelector('.timer');
+        this.progressFill = document.querySelector('.progress-fill');
+        
+        this.currentSlide = 0;
+        this.totalSlides = this.slides.length;
+        this.autoSlideInterval = null;
+        this.autoSlideDelay = 10000; // 10 секунд
+        this.timerCounter = 10;
+        this.isPaused = false;
+        
+        this.init();
+    }
+    
+    init() {
+        // Инициализация
+        this.showSlide(this.currentSlide);
+        
+        // События кнопок
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
+        
+        // События точек
+        this.dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                const slideIndex = parseInt(e.target.dataset.slide);
+                this.goToSlide(slideIndex);
+            });
+        });
+        
+        // Пауза при наведении
+        this.carousel.addEventListener('mouseenter', () => this.pauseAutoSlide());
+        this.carousel.addEventListener('mouseleave', () => this.resumeAutoSlide());
+        
+        // Запуск автосмены
+        this.startAutoSlide();
+    }
+    
+    showSlide(index) {
+        // Скрываем все слайды
+        this.slides.forEach(slide => {
+            slide.classList.remove('active');
+        });
+        
+        // Убираем активный класс со всех точек
+        this.dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+        
+        // Показываем текущий слайд
+        this.slides[index].classList.add('active');
+        this.dots[index].classList.add('active');
+        
+        this.currentSlide = index;
+    }
+    
+    nextSlide() {
+        this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+        this.showSlide(this.currentSlide);
+        this.resetAutoSlide();
+    }
+    
+    prevSlide() {
+        this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        this.showSlide(this.currentSlide);
+        this.resetAutoSlide();
+    }
+    
+    goToSlide(index) {
+        this.currentSlide = index;
+        this.showSlide(this.currentSlide);
+        this.resetAutoSlide();
+    }
+    
+    startAutoSlide() {
+        this.resetAutoSlide();
+        
+        // Обновляем таймер каждую секунду
+        this.timerInterval = setInterval(() => {
+            if (!this.isPaused) {
+                this.timerCounter--;
+                this.updateTimerDisplay();
+                
+                if (this.timerCounter <= 0) {
+                    this.nextSlide();
+                }
+            }
+        }, 1000);
+    }
+    
+    pauseAutoSlide() {
+        this.isPaused = true;
+        this.progressFill.style.animationPlayState = 'paused';
+    }
+    
+    resumeAutoSlide() {
+        this.isPaused = false;
+        this.progressFill.style.animationPlayState = 'running';
+    }
+    
+    resetAutoSlide() {
+        this.timerCounter = 10;
+        this.updateTimerDisplay();
+        
+        // Перезапускаем анимацию прогресс-бара
+        this.progressFill.style.animation = 'none';
+        setTimeout(() => {
+            this.progressFill.style.animation = 'progress 10s linear infinite';
+        }, 10);
+    }
+    
+    updateTimerDisplay() {
+        if (this.timerElement) {
+            this.timerElement.textContent = this.timerCounter;
+        }
+    }
+    
+    destroy() {
+        clearInterval(this.timerInterval);
+        clearInterval(this.autoSlideInterval);
+    }
+}
+
+// Инициализация карусели после загрузки DOM
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = new RecipeCarousel();
+    
+    // Обработка кликов по кнопкам в слайдах
+    document.querySelectorAll('.slide-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const category = btn.closest('.carousel-slide').dataset.category;
+            filterRecipesByCategory(category);
+            
+            // Плавная прокрутка к рецептам
+            const recipesSection = document.querySelector('.recipes-grid');
+            if (recipesSection) {
+                recipesSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+
+// Функция фильтрации рецептов по категории
+function filterRecipesByCategory(category) {
+    const recipeCards = document.querySelectorAll('.recipe-card');
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    
+    // Обновляем активную кнопку категории (если она есть на странице)
+    categoryButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.category === category || 
+            (category === 'all' && btn.dataset.category === 'all')) {
+            btn.classList.add('active');
+        }
+    });
+    
+    // Показываем/скрываем рецепты
+    recipeCards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 10);
+        } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                card.style.display = 'none';
+            }, 300);
+        }
+    });
+}
+</script>
+</html>
